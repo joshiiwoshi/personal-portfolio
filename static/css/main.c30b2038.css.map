@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.c30b2038.css","mappings":"AAAA,KAEI,qBAAsB,CADtB,UCEJ","sources":["css/App.scss","css/App.css"],"sourcesContent":["body {\n    color: black;\n    background-color: gray;\n}","body {\n  color: black;\n  background-color: gray;\n}\n\n"],"names":[],"sourceRoot":""}
