@@ -2,3 +2,83 @@ body {
     color: black;
     background-color: gray;
 }
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    
+    #navbar-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+        margin: 30px 50px 10px 50px;
+
+        h1 {
+            margin: 0;
+        }
+
+        #page-sections {
+            ul {
+                display: flex;
+                flex-direction: row;
+                margin: 0;
+                gap: 30px;
+                padding: 0;
+            }
+
+            li {
+                list-style-type: none;
+                font-size: 20px;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+}
+
+#about {
+    height: 100vh;
+    #hero-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+
+        h1 {
+            margin: 0;
+        }
+
+        p {
+            margin: 0;
+            font-size: 20px;
+        }
+    }
+}
+
+#projects {
+    #projects-container {
+        text-align: center;
+        h1 {
+            margin: 0;
+        }
+    }
+}
+
+#contacts {
+    #contacts-container {
+        text-align: center;
+        h1 {
+            margin: 0;
+        }
+    }
+}

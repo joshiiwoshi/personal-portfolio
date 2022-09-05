@@ -4,8 +4,14 @@ export default function Navbar() {
   return (
     <div id="navbar">
       <div id="navbar-container">
-      <i className="fa-solid fa-heart"></i>
         <h1>Codie's Portfolio</h1>
+        <div id="page-sections">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   )

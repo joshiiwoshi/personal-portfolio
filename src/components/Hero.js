@@ -2,10 +2,11 @@ import React from 'react'
 
 export default function Hero() {
   return (
-    <div>
-      <h1>
-        HERO
-      </h1>
+    <div id="about">
+      <div id="hero-container">
+        <h1>Codie Joshua Aragon</h1>
+        <p>Full Stack Developer</p>
+      </div>
     </div>
   )
 }
