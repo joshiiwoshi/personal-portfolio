@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <div id="navbar">
       <div id="navbar-container">
-        <h1>Codie's Portfolio</h1>
+        <h1 onClick={() => window.open("https://joshiiwoshi.github.io/personal-portfolio/")}>Codie's Portfolio</h1>
         <div id="page-sections">
           <ul>
             <li><a href="#about">About</a></li>

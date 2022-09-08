@@ -27,6 +27,9 @@ html, body, #root {
   margin: 0;
   font-size: 5vmin;
 }
+#navbar #navbar-container h1:hover {
+  cursor: pointer;
+}
 #navbar #navbar-container #page-sections ul {
   display: flex;
   flex-direction: row;
