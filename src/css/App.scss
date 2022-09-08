@@ -1,6 +1,17 @@
-body {
-    color: black;
-    background-color: gray;
+$main-dark: #2b2d42;
+$dark-gray: #8d99ae;
+$gray: #edf2f4;
+$light-red: #ef233c;
+$red: #d90429;
+
+html, body, #root {
+    vertical-align: baseline;
+    color: $gray;
+    background-color: $main-dark;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+    min-width: fit-content;
 }
 
 #navbar {
@@ -16,10 +27,11 @@ body {
         justify-content: space-between;
         align-items: center;
         overflow: hidden;
-        margin: 30px 50px 10px 50px;
+        margin: 5vmin 10vmin 5vmin 10vmin;
 
         h1 {
             margin: 0;
+            font-size: 5vmin;
         }
 
         #page-sections {
@@ -27,58 +39,165 @@ body {
                 display: flex;
                 flex-direction: row;
                 margin: 0;
-                gap: 30px;
+                gap: 3vw;
                 padding: 0;
             }
 
             li {
                 list-style-type: none;
-                font-size: 20px;
+                font-size: 3.5vmin;
             }
 
             a {
                 text-decoration: none;
-                color: black;
+                color: $dark-gray;
             }
         }
     }
 }
 
+@media only screen and (max-width: 600px) {
+    #navbar {
+        #navbar-container {
+            justify-content: center;
+        }
+    }
+
+    #page-sections {
+        display: none;
+    }
+}
+
 #about {
     height: 100vh;
+    width: 100%;
+    float: none;
+    overflow: hidden;
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/background/city.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-color: $main-dark;
     #hero-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
+        width: 100%;
         height: 100%;
 
         h1 {
             margin: 0;
+            font-size: 6vmin;
+            color: $gray;
         }
 
         p {
             margin: 0;
-            font-size: 20px;
+            font-size: 4vmin;
+            color: $light-red;
         }
     }
 }
 
-#projects {
-    #projects-container {
+#projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5vmin;
+    padding: 10vmin;
+    background-color: $main-dark;
+
+    #projects-grid-container {
         text-align: center;
         h1 {
             margin: 0;
+            font-size: 7vmin;
+        }
+    }
+}
+
+.project {
+    margin: 10vmin;
+    .project-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 5vmin;
+        gap: 5vmin;
+        background-color: $light-red;
+        border-radius: 10%;
+        transition: all 0.2s ease-in-out;
+        width: 50vmin;
+
+        .img-container {
+            margin: 0;
+            
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 10%;
+            }
+        }
+
+        p {
+            background-color: $gray;
+            color: $main-dark;
+            border-radius: 10%;
+            padding: 2vmin;
+            margin: 0;
+            font-size: 3.5vmin;
+            box-shadow: 5px 5px $main-dark;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+            cursor: pointer;
         }
     }
 }
 
 #contacts {
+    padding: 10vmin;
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/background/coffee.jpg");
+    background-position: center;
+    background-attachment: fixed;
     #contacts-container {
         text-align: center;
         h1 {
             margin: 0;
+            font-size: 7vmin;
+        }
+
+        #contact-list {
+            margin: 10vmin;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 15vmin;
+
+            .contact {
+                padding: 5vmin;
+                border-radius: 10%;
+                transition: all 0.2s ease-in-out;
+
+                i {
+                    font-size: 15vmin;
+                }
+
+                p {
+                    font-size: 5vmin;
+                }
+
+            }
+
+            .contact:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+            }
         }
     }
 }

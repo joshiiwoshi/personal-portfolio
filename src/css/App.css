@@ -1,6 +1,11 @@
-body {
-  color: black;
-  background-color: gray;
+html, body, #root {
+  vertical-align: baseline;
+  color: #edf2f4;
+  background-color: #2b2d42;
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+  width: 100%;
+  min-width: fit-content;
 }
 
 #navbar {
@@ -16,29 +21,45 @@ body {
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-  margin: 30px 50px 10px 50px;
+  margin: 5vmin 10vmin 5vmin 10vmin;
 }
 #navbar #navbar-container h1 {
   margin: 0;
+  font-size: 5vmin;
 }
 #navbar #navbar-container #page-sections ul {
   display: flex;
   flex-direction: row;
   margin: 0;
-  gap: 30px;
+  gap: 3vw;
   padding: 0;
 }
 #navbar #navbar-container #page-sections li {
   list-style-type: none;
-  font-size: 20px;
+  font-size: 3.5vmin;
 }
 #navbar #navbar-container #page-sections a {
   text-decoration: none;
-  color: black;
+  color: #8d99ae;
 }
 
+@media only screen and (max-width: 600px) {
+  #navbar #navbar-container {
+    justify-content: center;
+  }
+  #page-sections {
+    display: none;
+  }
+}
 #about {
   height: 100vh;
+  width: 100%;
+  float: none;
+  overflow: hidden;
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/background/city.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-color: #2b2d42;
 }
 #about #hero-container {
   display: flex;
@@ -46,28 +67,109 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  width: 100%;
   height: 100%;
 }
 #about #hero-container h1 {
   margin: 0;
+  font-size: 6vmin;
+  color: #edf2f4;
 }
 #about #hero-container p {
   margin: 0;
-  font-size: 20px;
+  font-size: 4vmin;
+  color: #ef233c;
 }
 
-#projects #projects-container {
+#projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5vmin;
+  padding: 10vmin;
+  background-color: #2b2d42;
+}
+#projects-grid #projects-grid-container {
   text-align: center;
 }
-#projects #projects-container h1 {
+#projects-grid #projects-grid-container h1 {
   margin: 0;
+  font-size: 7vmin;
 }
 
+.project {
+  margin: 10vmin;
+}
+.project .project-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5vmin;
+  gap: 5vmin;
+  background-color: #ef233c;
+  border-radius: 10%;
+  transition: all 0.2s ease-in-out;
+  width: 50vmin;
+}
+.project .project-container .img-container {
+  margin: 0;
+}
+.project .project-container .img-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+}
+.project .project-container p {
+  background-color: #edf2f4;
+  color: #2b2d42;
+  border-radius: 10%;
+  padding: 2vmin;
+  margin: 0;
+  font-size: 3.5vmin;
+  box-shadow: 5px 5px #2b2d42;
+}
+.project .project-container:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+#contacts {
+  padding: 10vmin;
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/background/coffee.jpg");
+  background-position: center;
+  background-attachment: fixed;
+}
 #contacts #contacts-container {
   text-align: center;
 }
 #contacts #contacts-container h1 {
   margin: 0;
+  font-size: 7vmin;
+}
+#contacts #contacts-container #contact-list {
+  margin: 10vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15vmin;
+}
+#contacts #contacts-container #contact-list .contact {
+  padding: 5vmin;
+  border-radius: 10%;
+  transition: all 0.2s ease-in-out;
+}
+#contacts #contacts-container #contact-list .contact i {
+  font-size: 15vmin;
+}
+#contacts #contacts-container #contact-list .contact p {
+  font-size: 5vmin;
+}
+#contacts #contacts-container #contact-list .contact:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=App.css.map */
