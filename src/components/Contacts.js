@@ -15,7 +15,7 @@ export default function Contacts() {
             <p>Email</p>
           </div>
           <div className='contact'>
-            <i className="fa-brands fa-discord" onClick={async () => {await navigator.clipboard.writeText("713018450838290434"); alert("Discord ID copied to clipboard!");}}></i>
+            <i className="fa-brands fa-discord" onClick={async () => {await navigator.clipboard.writeText("cods#3100"); alert("Discord Tag copied to clipboard!");}}></i>
             <p>Discord</p>
           </div>
         </div>
