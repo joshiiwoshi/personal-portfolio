@@ -8,7 +8,7 @@ export default function Navbar() {
         <div id="page-sections">
           <ul>
             <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#projects-grid">Projects</a></li>
             <li><a href="#contacts">Contacts</a></li>
           </ul>
         </div>
